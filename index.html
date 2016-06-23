@@ -3,21 +3,18 @@ layout: default
 ---
 
 <div class="home">
+      <img alt=" " src="https://avatars.githubusercontent.com/{{ site.github_username }}" >
 
-  <h1 class="page-heading">Posts</h1>
+  <p>{{site.description }} <br>
+  Contact us via mail <a href="mailto:{{ site.email }}">{{ site.email }}</a>. Or write an issue in our <a href="https://github.com/ExtendScript/AMA/issues">"Ask Me Anything"</a> repo.
+        </p>
+        <p>This site is still a work in progress. Come back soon(ish)</p>
+<p>
+          {% if site.github_username %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            {% include icon-github.html username=site.github_username %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+          {% endif %}</p>
+<!--   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+ -->
 </div>
